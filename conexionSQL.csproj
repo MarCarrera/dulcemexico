@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4C54B923-5FED-4695-82A7-D7BCB75F3E50}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>conexionSQL</RootNamespace>
+    <AssemblyName>conexionSQL</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.4.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>packages\FontAwesome.Sharp.5.15.4\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessLayer\CN_clientes.cs" />
+    <Compile Include="BusinessLayer\CN_productos.cs" />
+    <Compile Include="DataLayer\CD_clientes.cs" />
+    <Compile Include="Views\Caja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Caja.Designer.cs">
+      <DependentUpon>Caja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataLayer\CD_productos.cs" />
+    <Compile Include="DataLayer\Conexion.cs" />
+    <Compile Include="Views\DM-clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DM-clientes.Designer.cs">
+      <DependentUpon>DM-clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dulce Mexico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Dulce Mexico.Designer.cs">
+      <DependentUpon>Dulce Mexico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DM_productos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DM_productos.Designer.cs">
+      <DependentUpon>DM_productos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DM_ventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DM_ventas.Designer.cs">
+      <DependentUpon>DM_ventas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dulcemexicoDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dulcemexicoDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="escuelaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>escuelaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Views\Caja.resx">
+      <DependentUpon>Caja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DM-clientes.resx">
+      <DependentUpon>DM-clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Dulce Mexico.resx">
+      <DependentUpon>Dulce Mexico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DM_productos.resx">
+      <DependentUpon>DM_productos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DM_ventas.resx">
+      <DependentUpon>DM_ventas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="dulcemexicoDataSet6.xsc">
+      <DependentUpon>dulcemexicoDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="dulcemexicoDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dulcemexicoDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dulcemexicoDataSet6.xss">
+      <DependentUpon>dulcemexicoDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="escuelaDataSet.xsc">
+      <DependentUpon>escuelaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="escuelaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>escuelaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="escuelaDataSet.xss">
+      <DependentUpon>escuelaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
